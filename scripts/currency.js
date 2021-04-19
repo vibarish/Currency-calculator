@@ -40,9 +40,7 @@ fetch('https://www.cbr-xml-daily.ru/daily_json.js')
 
     euroDynamicValue = euroRate - out.Valute.EUR.Previous;
     usdDynamicValue = usdRate - out.Valute.USD.Previous; 
-}).catch(err => console.error(err))
 
-window.addEventListener('load', () => {
     euroDynamic.innerHTML = `${euroDynamicValue.toFixed(2)} рублей`;
     usdDynamic.innerHTML = `${usdDynamicValue.toFixed(2)} рублей`;
 
@@ -53,9 +51,7 @@ window.addEventListener('load', () => {
     if (usdDynamicValue > 0) {
         usdDynamic.classList.add('currency-dynamic-more');
     } else usdDynamic.classList.add('currency-dynamic-less');
-
-
-})
+}).catch(err => console.error(err))
 
 fetch('http://data.fixer.io/api/latest?access_key=6e8524d4331fe38345d536b0735ffdde')
     .then(res => res.json())
