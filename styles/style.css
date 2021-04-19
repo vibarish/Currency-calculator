@@ -1,0 +1,137 @@
+html {
+  font-family: 'Sunflower', sans-serif;
+}
+body {
+  min-width: 360px;
+  font-family: 'Comfortaa', cursive, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.app {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-style: outset;
+  border-radius: 2%;
+  transition: all 0.5s ease-in ;
+}
+.app-salary {
+  display: none;
+}
+.app-salary-visible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-style: outset;
+  transition: all ease-in-out 0.3s;
+  padding: 0.3rem;
+  margin: 0.3rem;
+}
+header {
+  height: 70px;
+  width: 100%;
+}
+.currency-table {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+input, button {
+  padding: 0.6rem;
+  margin: 0.4rem;
+  border-radius: 5%;
+  font-size: 1.2rem;
+  width: 100px;
+}
+button {
+  color: white;
+  background-color: rgb(38, 101, 143);
+  cursor: pointer;
+  max-width: 20rem;
+  align-items: center;
+  border: none;
+}
+button:hover {
+  background-color: blue;
+  transition: all ease-in 0.5s;
+  box-shadow: blue;
+}
+button:active {
+  background-color: blueviolet;
+}
+.display-panel {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+#display-panel__zp, #display-panel__k, #zp {
+  padding: 1rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+table, th, td {
+  border: 1px solid black;
+  text-align: left;
+  margin: 10px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 5px;
+}
+
+th {
+  background-color: rgb(114, 35, 84);
+  color: white;
+}
+
+tr:hover {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.currency-dynamic-less {
+  color: red;
+}
+
+.currency-dynamic-more {
+  color: green;
+}
+
+@media (max-width: 800px) {
+  #first, #second {
+    width: 1rem
+  }
+  .input-panel__radio {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+.app-visible {
+  display: flex;
+  flex-direction: column;
+}
+.control-btns {
+  flex-direction: column;
+}
+.circle {
+  width: 7rem;
+  height: 7rem;
+}
+.input-panel__radio {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+}
