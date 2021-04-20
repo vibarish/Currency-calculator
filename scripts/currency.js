@@ -64,6 +64,15 @@ fetch('http://data.fixer.io/api/latest?access_key=6e8524d4331fe38345d536b0735ffd
         usdStock.innerHTML = usdStockRate.toFixed(3);
 }).catch(err => console.error(err));
 
+// fetch("https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml")
+//   .then(response => response.text())
+//   .then(data => {
+//     const parser = new DOMParser();
+//     const xml = parser.parseFromString(data, "application/xml");
+//     console.log(xml);
+//   })
+//   .catch(console.error);
+
 usdIn.addEventListener('submit', (event) => {
     event.preventDefault();
     if (usdInput.value > 0) {
