@@ -53,7 +53,7 @@ fetch('https://www.cbr-xml-daily.ru/daily_json.js')
     } else usdDynamic.classList.add('currency-dynamic-less');
 }).catch(err => console.error(err))
 
-fetch('https://data.fixer.io/api/latest?access_key=6e8524d4331fe38345d536b0735ffdde')
+fetch('http://data.fixer.io/api/latest?access_key=6e8524d4331fe38345d536b0735ffdde')
     .then(res => res.json())
     .then((out) => {
         console.log(out);
