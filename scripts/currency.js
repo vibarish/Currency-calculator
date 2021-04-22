@@ -53,12 +53,12 @@ fetch('https://www.cbr-xml-daily.ru/daily_json.js')
     } else usdDynamic.classList.add('currency-dynamic-less');
 }).catch(err => console.error(err))
 
-fetch('http://data.fixer.io/api/latest?access_key=6e8524d4331fe38345d536b0735ffdde')
+fetch('https://openexchangerates.org/api/latest.json?app_id=3cd2a00ebc2b49978ecfdb19ce68cecf')
     .then(res => res.json())
     .then((out) => {
         console.log(out);
-        euroStockRate = out.rates.RUB;
-        usdStockRate = (out.rates.RUB / out.rates.USD);
+        euroStockRate = out.rates.RUB / out.rates.EUR;
+        usdStockRate = out.rates.RUB;
 
         euroStock.innerHTML = euroStockRate.toFixed(3);
         usdStock.innerHTML = usdStockRate.toFixed(3);
