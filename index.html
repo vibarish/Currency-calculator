@@ -19,7 +19,8 @@
   <div class="app">
     <div class="currency-table">
       <span id="date"></span>
-      <h4>Расчет по биржевому курсу</h4>
+      <h4>Расчет по биржевому курсу </h4>
+      <p id="today"></p>
       <table style="width:100%">
         <tr>
           <th>Валюта</th>
@@ -53,6 +54,20 @@
         </tr>
       </table>
       <!-- Справочные значения -->
+      <h4>Узнать биржевой курс по дате</h4>
+      <div class="history">
+        <form id="calendar-form">
+          <input id="calendar" type="date">
+        </form>
+        <input type="radio" id="contactChoice1"
+          name="currency" value="USD" checked>
+          <label for="contactChoice1">Доллар</label>
+
+        <input type="radio" id="contactChoice2"
+          name="currency" value="EUR">
+          <label for="contactChoice2">Евро</label>
+      </div>
+      <p id="history-rate"></p>
       <h4>Курс валют Центрбанка</h4>
       <table style="width:100%">
         <tr>
@@ -75,5 +90,6 @@
     </div>
   </div>
   <script src="./scripts/currency.js"></script>
+  <script src="./scripts/historyRate.js"></script>
 </body>
 </html>

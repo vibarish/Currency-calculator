@@ -18,20 +18,17 @@ const resultSum = document.getElementById('resultSum');
 const usdDynamic = document.getElementById('usd-dynamic');
 const euroDynamic = document.getElementById('euro-dynamic');
 
-let euroDynamicValue = 0;
-let usdDynamicValue = 0;
-
-let usdRate = 0;
-let euroRate = 0;
-
 let usdStockRate = 0;
 let euroStockRate = 0;
-
-let result = 0;
 
 fetch('https://www.cbr-xml-daily.ru/daily_json.js')
 .then(res => res.json())
 .then((out) => {
+    let usdRate = 0;
+    let euroRate = 0;
+    let euroDynamicValue = 0;
+    let usdDynamicValue = 0;
+
     euroRate = out.Valute.EUR.Value;
     usdRate = out.Valute.USD.Value;
 
@@ -56,7 +53,7 @@ fetch('https://www.cbr-xml-daily.ru/daily_json.js')
 fetch('https://openexchangerates.org/api/latest.json?app_id=3cd2a00ebc2b49978ecfdb19ce68cecf')
     .then(res => res.json())
     .then((out) => {
-        console.log(out);
+        // console.log(out);
         euroStockRate = out.rates.RUB / out.rates.EUR;
         usdStockRate = out.rates.RUB;
 
@@ -64,44 +61,33 @@ fetch('https://openexchangerates.org/api/latest.json?app_id=3cd2a00ebc2b49978ecf
         usdStock.innerHTML = usdStockRate.toFixed(3);
 }).catch(err => console.error(err));
 
-// fetch("https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml")
-//   .then(response => response.text())
-//   .then(data => {
-//     const parser = new DOMParser();
-//     const xml = parser.parseFromString(data, "application/xml");
-//     console.log(xml);
-//   })
-//   .catch(console.error);
-
-usdIn.addEventListener('submit', (event) => {
-    event.preventDefault();
-    if (usdInput.value > 0) {
+function currencyInputHandler(inputValue) {
+    if (inputValue > 0) {
         resultHandler();
-        sumUSD.innerText = (usdStockRate * usdInput.value).toFixed(2);
-        sumEuro.innerHTML = (euroStockRate * euroInput.value).toFixed(2);
+        sumUSD.innerText = (usdStockRate * usdInput.value).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        sumEuro.innerHTML = (euroStockRate * euroInput.value).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     }
     else {
         alert('Введите корректные данные!');
-        usdInput.value = 0;
+        inputValue = 0;
     }
+}
+
+usdIn.addEventListener('submit', (event) => {
+    event.preventDefault();
+    currencyInputHandler(usdInput.value);
 });
 
 euroIn.addEventListener('submit', (event) => {
     event.preventDefault();
-    if (euroInput.value > 0) {
-        resultHandler();
-        sumEuro.innerHTML = (euroStockRate * euroInput.value).toFixed(2);
-        sumUSD.innerText = (usdStockRate * usdInput.value).toFixed(2);
-    }
-    else {
-        alert('Введите корректные данные!');
-        euroInput.value = 0;
-    }
+    currencyInputHandler(euroInput.value);
 });
 
 const resultHandler = () => {
-    result = usdInput.value * usdRate + euroRate * euroInput.value;
-    resultSum.innerHTML = `${result.toFixed(2)} рублей`;
+    let result = 0;
+
+    result = usdInput.value * usdStockRate + euroStockRate * euroInput.value;
+    resultSum.innerHTML = `${result.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} рублей`;
 };
 
 
