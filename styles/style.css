@@ -9,6 +9,7 @@ body {
   min-width: 400px;
   font-family: 'Comfortaa', cursive, Arial, Helvetica, sans-serif;
   padding: 0;
+  margin: 0;
   background-color: rgb(156, 156, 141);
 }
 .app {
