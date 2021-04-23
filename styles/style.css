@@ -2,10 +2,14 @@ html {
   font-family: 'Sunflower', sans-serif;
 }
 body {
-  min-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 400px;
   font-family: 'Comfortaa', cursive, Arial, Helvetica, sans-serif;
-  margin: 0;
+  margin: 5px;
   padding: 0;
+  background-color: rgb(156, 156, 141);
 }
 .app {
   display: flex;
@@ -14,22 +18,18 @@ body {
   border-style: outset;
   border-radius: 2%;
   transition: all 0.5s ease-in ;
-}
-.app-salary {
-  display: none;
-}
-.app-salary-visible {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-style: outset;
-  transition: all ease-in-out 0.3s;
-  padding: 0.3rem;
-  margin: 0.3rem;
+  background-color: white;
+  padding: 5px;
 }
 header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 70px;
-  width: 100%;
+  width: 90%;
+  background-color: white;
+  margin: 5px;
+  border-radius: 2%;
 }
 .currency-table {
   display: flex;
@@ -51,38 +51,9 @@ input, button {
 #calendar {
   width: 180px;
 }
-button {
-  color: white;
-  background-color: rgb(38, 101, 143);
-  cursor: pointer;
-  max-width: 20rem;
-  align-items: center;
-  border: none;
-}
-button:hover {
-  background-color: blue;
-  transition: all ease-in 0.5s;
-  box-shadow: blue;
-}
-button:active {
-  background-color: blueviolet;
-}
-.display-panel {
-  display: flex;
-  flex-direction: column;
-  margin: 2rem;
-}
-#display-panel__zp, #display-panel__k, #zp {
-  padding: 1rem;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-}
 
 table, th, td {
-  border: 1px solid black;
+  border: 0.5px ridge rgb(114, 35, 84);
   text-align: left;
   margin: 10px;
   border-collapse: collapse;
@@ -116,36 +87,22 @@ tr:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
 
 h4, p {
   margin: 5px;
 }
 
+#currency-radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 800px) {
-  #first, #second {
-    width: 1rem
-  }
-  .input-panel__radio {
-    display: flex;
+  .history {
     flex-direction: column;
-    margin: 1rem;
-}
-.app-visible {
-  display: flex;
-  flex-direction: column;
-}
-.control-btns {
-  flex-direction: column;
-}
-.circle {
-  width: 7rem;
-  height: 7rem;
-}
-.input-panel__radio {
-  height: 10rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
+  }
 }
