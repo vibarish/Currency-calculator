@@ -8,7 +8,6 @@ body {
   align-items: center;
   min-width: 400px;
   font-family: 'Comfortaa', cursive, Arial, Helvetica, sans-serif;
-  margin: 5px;
   padding: 0;
   background-color: rgb(156, 156, 141);
 }
@@ -41,11 +40,11 @@ header {
   align-items: center;
   font-size: 18px;
 }
-input, button {
+input {
   padding: 0.6rem;
   margin: 0.4rem;
   border-radius: 5%;
-  font-size: 1.2rem;
+  font-size: 20px;
   width: 100px;
   border-style: dotted;
 }
@@ -104,10 +103,22 @@ h4, p {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 5px;
+  margin: 5px;
+}
+
+#euro-radio, #usd-radio {
+  height: 25px;
 }
 
 @media (max-width: 800px) {
   .history {
     flex-direction: column;
+  }
+  table, th, td {
+    margin: 5px;
+  }
+  h4, p {
+    margin: 3px;
   }
 }
