@@ -67,11 +67,6 @@ th, td {
 
 .icon {
   font-size: 25px;
-  color: var(--theme-color);
-}
-
-.icon:hover {
-  color: white;
 }
 
 th {
