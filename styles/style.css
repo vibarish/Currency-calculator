@@ -65,6 +65,11 @@ th, td {
   padding: 5px;
 }
 
+.icon {
+  font-size: 25px;
+  color: var(--theme-color);
+}
+
 th {
   background-color: var(--theme-color);
   color: white;
