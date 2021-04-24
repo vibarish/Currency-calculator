@@ -55,11 +55,13 @@
       </table>
     </div>
     <!-- Справочные значения -->
-    <h4>Узнать биржевой курс по дате</h4>
     <div class="history">
-      <form id="calendar-form">
-        <input id="calendar" type="date">
-      </form>
+      <div>
+        <h4>Узнать биржевой курс по дате</h4>
+        <form id="calendar-form">
+          <input id="calendar" type="date">
+        </form>
+      </div>
       <form id="currency-radio">
         <input type="radio" id="usd-radio"
           name="currency" value="USD" checked>
@@ -69,8 +71,8 @@
           name="currency" value="EUR">
           <label for="contactChoice2">Евро</label>
       </form>
+      <p id="history-rate"></p>
     </div>
-    <p id="history-rate"></p>
     <div class="currency-table">
       <h4>Курс валют Центрбанка</h4>
       <table>
