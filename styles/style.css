@@ -3,6 +3,8 @@
   font-family: 'Sunflower', sans-serif;
   margin: 0;
   padding: 0;
+}
+body {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,9 +14,6 @@
   margin: 0;
   background-color: rgb(156, 156, 141);
 }
-/* body {
-
-} */
 .app {
   display: flex;
   flex-direction: column;
