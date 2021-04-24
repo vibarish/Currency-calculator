@@ -29,9 +29,8 @@ header {
   align-items: center;
   justify-content: center;
   height: 70px;
-  width: 90%;
+  width: 100%;
   background-color: white;
-  margin: 5px;
   border-radius: 2%;
 }
 .currency-table {
@@ -57,7 +56,7 @@ input {
 
 table, th, td {
   border: 0.5px ridge var(--theme-color);
-  text-align: left;
+  text-align: center;
   margin: 10px;
   border-collapse: collapse;
 }
