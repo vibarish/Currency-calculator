@@ -10,10 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- <header>
+  <header>
     <!-- <img src="./img/exchange.jpg" alt=""> -->
-    <!-- <h2 style="text-align:center">Расчет валюты</h2>
-  </header> --> -->
+    <h2 style="text-align:center">Расчет валюты</h2>
+  </header>
   <div class="control-btns">
   </div>
   <div class="app">
@@ -53,43 +53,43 @@
           <td id="resultSum"></td>
         </tr>
       </table>
-      <!-- Справочные значения -->
-      <h4>Узнать биржевой курс по дате</h4>
-      <div class="history">
-        <form id="calendar-form">
-          <input id="calendar" type="date">
-        </form>
-        <form id="currency-radio">
-          <input type="radio" id="usd-radio"
-            name="currency" value="USD" checked>
-            <label for="contactChoice1">Доллар</label>
-  
-          <input type="radio" id="euro-radio"
-            name="currency" value="EUR">
-            <label for="contactChoice2">Евро</label>
-        </form>
-      </div>
-      <p id="history-rate"></p>
-      <div class="currency-table">
-        <h4>Курс валют Центрбанка</h4>
-        <table>
-          <tr>
-            <th>Валюта</th>
-            <th>Курс ЦБ</th>
-            <th>Изменение курса</th>
-          </tr>
-          <tr>
-            <td><i class="fas fa-dollar-sign"></i></td>
-            <td id="usd"></td>
-            <td class="" id="usd-dynamic"></td>
-          </tr>
-          <tr>
-            <td><i class="fas fa-euro-sign"></i></td>
-            <td id="euro"></td>
-            <td class="" id="euro-dynamic"></td>
-          </tr>
-        </table>
-      </div>
+    </div>
+    <!-- Справочные значения -->
+    <h4>Узнать биржевой курс по дате</h4>
+    <div class="history">
+      <form id="calendar-form">
+        <input id="calendar" type="date">
+      </form>
+      <form id="currency-radio">
+        <input type="radio" id="usd-radio"
+          name="currency" value="USD" checked>
+          <label for="contactChoice1">Доллар</label>
+
+        <input type="radio" id="euro-radio"
+          name="currency" value="EUR">
+          <label for="contactChoice2">Евро</label>
+      </form>
+    </div>
+    <p id="history-rate"></p>
+    <div class="currency-table">
+      <h4>Курс валют Центрбанка</h4>
+      <table>
+        <tr>
+          <th>Валюта</th>
+          <th>Курс ЦБ</th>
+          <th>Изменение курса</th>
+        </tr>
+        <tr>
+          <td><i class="fas fa-dollar-sign"></i></td>
+          <td id="usd"></td>
+          <td class="" id="usd-dynamic"></td>
+        </tr>
+        <tr>
+          <td><i class="fas fa-euro-sign"></i></td>
+          <td id="euro"></td>
+          <td class="" id="euro-dynamic"></td>
+        </tr>
+      </table>
     </div>
   </div>
   <script src="./scripts/currency.js"></script>

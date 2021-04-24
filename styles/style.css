@@ -16,7 +16,7 @@ body {
 }
 .app {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   border-style: outset;
   border-radius: 2%;
