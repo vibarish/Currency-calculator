@@ -136,4 +136,9 @@ h2 {
   h4, p {
     margin: 3px;
   }
+  input {
+    padding: 0.3rem;
+    margin: 0.2rem;
+    width: 70px;
+  }
 }
