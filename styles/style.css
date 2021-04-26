@@ -22,7 +22,7 @@ body {
   border-radius: 2%;
   transition: all 0.5s ease-in ;
   background-color: white;
-  padding: 5px;
+  /* padding: 5px; */
 }
 header {
   display: flex;
@@ -43,8 +43,8 @@ header {
   font-size: 18px;
 }
 input {
-  padding: 0.6rem;
-  margin: 0.4rem;
+  /* padding: 0.6rem; */
+  /* margin: 0.4rem; */
   border-radius: 5%;
   font-size: 20px;
   width: 100px;
@@ -57,7 +57,7 @@ input {
 table, th, td {
   border: 0.5px ridge var(--theme-color);
   text-align: center;
-  margin: 10px;
+  /* margin: 10px; */
   border-collapse: collapse;
 }
 
@@ -66,7 +66,7 @@ table, th, td {
 }
 
 th, td {
-  padding: 5px;
+  /* padding: 5px; */
 }
 
 .icon {
@@ -98,7 +98,7 @@ tr:hover {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  /* padding: 10px; */
   /* width: 300px; */
 }
 #history-rate {
@@ -107,15 +107,15 @@ tr:hover {
 }
 
 h4, p {
-  margin: 5px;
+  /* margin: 5px; */
 }
 
 #currency-radio {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
-  margin: 5px;
+  /* padding: 5px; */
+  /* margin: 5px; */
 }
 
 #euro-radio, #usd-radio {
@@ -126,10 +126,10 @@ h4, p {
   .history {
     flex-direction: column;
   }
-  table, th, td {
-    margin: 2px;
-  }
+  /* table, th, td { */
+    /* margin: 2px; */
+  /* } */
   h4, p {
-    margin: 3px;
+    /* margin: 3px; */
   }
 }
