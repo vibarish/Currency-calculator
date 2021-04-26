@@ -14,7 +14,7 @@ body {
   margin: 0;
   background-color: rgb(156, 156, 141);
 }
-.app {
+.app, header {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -23,8 +23,9 @@ body {
   transition: all 0.5s ease-in ;
   background-color: white;
   padding: 5px;
+  width: 500px;
 }
-header {
+/* header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,7 +33,7 @@ header {
   width: 100%;
   background-color: white;
   /* border-radius: 2%; */
-}
+/* } */ 
 .currency-table {
   display: flex;
   flex-direction: column;
@@ -98,7 +99,7 @@ tr:hover {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  /* padding: 10px; */
   /* width: 300px; */
 }
 #history-rate {
@@ -112,6 +113,7 @@ h4, p {
 
 #currency-radio {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 5px;
@@ -129,6 +131,9 @@ h2 {
 @media (max-width: 800px) {
   .history {
     flex-direction: column;
+  }
+  #currency-radio {
+    flex-direction: row;
   }
   table, th, td {
     margin: 2px;
