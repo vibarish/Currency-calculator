@@ -8,7 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 400px;
+  /* min-width: 400px; */
   font-family: 'Comfortaa', cursive, Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
@@ -33,7 +33,7 @@ header {
   background-color: white;
   border-radius: 2%;
 }
-/* .currency-table {
+.currency-table {
   display: flex;
   flex-direction: column;
   justify-self: center;
@@ -41,7 +41,7 @@ header {
   align-content: center;
   align-items: center;
   font-size: 18px;
-} */
+}
 input {
   padding: 0.6rem;
   margin: 0.4rem;
@@ -120,6 +120,10 @@ h4, p {
 
 #euro-radio, #usd-radio {
   height: 25px;
+}
+
+h2 {
+  text-align: center;
 }
 
 @media (max-width: 800px) {
