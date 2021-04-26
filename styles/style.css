@@ -18,8 +18,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* border-style: outset; */
-  /* border-radius: 2%; */
+  border-style: outset;
+  border-radius: 2%;
   transition: all 0.5s ease-in ;
   background-color: white;
   padding: 5px;
