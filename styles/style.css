@@ -8,7 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* min-width: 400px; */
+  min-width: 400px;
   font-family: 'Comfortaa', cursive, Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
@@ -19,7 +19,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   border-style: outset;
-  border-radius: 2%;
+  /* border-radius: 2%; */
   transition: all 0.5s ease-in ;
   background-color: white;
   padding: 5px;
@@ -31,7 +31,7 @@ header {
   height: 70px;
   width: 100%;
   background-color: white;
-  border-radius: 2%;
+  /* border-radius: 2%; */
 }
 .currency-table {
   display: flex;
