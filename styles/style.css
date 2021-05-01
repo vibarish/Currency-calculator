@@ -23,11 +23,9 @@ body {
   border-radius: 2%;
   transition: all 0.5s ease-in ;
   background-color: white;
-  padding: 5px;
+  padding: 7px;
   /* width: 500px; */
-}
-header {
-  max-width: 300px;
+  min-width: 400px;
 }
 .currency-table {
   display: flex;
