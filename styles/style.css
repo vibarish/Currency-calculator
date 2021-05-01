@@ -7,8 +7,9 @@
 body {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  /* max-width: 400px; */
   align-items: center;
-  min-width: 400px;
   font-family: 'Comfortaa', cursive, Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
@@ -22,20 +23,12 @@ body {
   border-radius: 2%;
   transition: all 0.5s ease-in ;
   background-color: white;
-  padding: 0;
-  width: 500px;
-  margin: 0;
-  width: 100%;
+  padding: 5px;
+  /* width: 500px; */
 }
-/* header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 70px;
-  width: 100%;
-  background-color: white;
-  /* border-radius: 2%; */
-/* } */ 
+header {
+  max-width: 300px;
+}
 .currency-table {
   display: flex;
   flex-direction: column;
@@ -46,6 +39,7 @@ body {
   font-size: 18px;
 }
 input {
+  display: flex;
   padding: 0.6rem;
   margin: 0.4rem;
   border-radius: 5%;
