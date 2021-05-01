@@ -23,9 +23,9 @@ body {
   border-radius: 2%;
   transition: all 0.5s ease-in ;
   background-color: white;
-  padding: 10px;
+  padding: 7px;
   /* width: 500px; */
-  min-width: 600px;
+  /* min-width: 600px; */
 }
 .currency-table {
   display: flex;
@@ -123,10 +123,10 @@ h2 {
 }
 
 @media (max-width: 800px) {
-  .app, header {
+  /* .app, header {
     padding: 3px;
     min-width: 300px;
-  }
+  } */
   .history {
     flex-direction: column;
   }
