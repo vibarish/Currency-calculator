@@ -125,7 +125,7 @@ h2 {
 @media (max-width: 800px) {
   .app, header {
     padding: 3px;
-    min-width: 400px;
+    min-width: 300px;
   }
   .history {
     flex-direction: column;
