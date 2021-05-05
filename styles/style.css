@@ -134,6 +134,9 @@ h2 {
   .history {
     flex-direction: column;
   }
+  #stock-tab {
+    min-width: 100px;
+  }
   #currency-radio {
     flex-direction: row;
   }
