@@ -10,12 +10,13 @@ body {
   flex-wrap: wrap;
   /* max-width: 400px; */
   align-items: center;
+  justify-content: center;
   font-family: 'Comfortaa', cursive, Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
   background-color: rgb(156, 156, 141);
 }
-.app, header {
+.app {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -23,9 +24,12 @@ body {
   border-radius: 2%;
   transition: all 0.5s ease-in ;
   background-color: white;
-  padding: 7px;
+  padding: 5px;
   /* width: 500px; */
   /* min-width: 600px; */
+}
+header {
+  color: white
 }
 .currency-table {
   display: flex;
@@ -35,6 +39,7 @@ body {
   align-content: center;
   align-items: center;
   font-size: 18px;
+  margin: 15px 0;
 }
 input {
   display: flex;
@@ -56,8 +61,8 @@ table, th, td {
   border-collapse: collapse;
 }
 
-#stock-table {
-  width: 600px;
+#stock-tab {
+  min-width: 450px;
 }
 
 th, td {
@@ -93,12 +98,15 @@ tr:hover {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin: 15px 0;
   /* padding: 10px; */
   /* width: 300px; */
 }
 #history-rate {
   font-size: 25px;
   color: var(--theme-color);
+  width: 200px;
+  height: 50px;
 }
 
 h4, p {
@@ -123,10 +131,6 @@ h2 {
 }
 
 @media (max-width: 800px) {
-  /* .app, header {
-    padding: 3px;
-    min-width: 300px;
-  } */
   .history {
     flex-direction: column;
   }
@@ -143,5 +147,12 @@ h2 {
     padding: 0.3rem;
     margin: 0.2rem;
     width: 70px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #tabs {
+    display: flex;
+    flex-direction: row;
   }
 }

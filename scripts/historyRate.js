@@ -1,6 +1,6 @@
 const calendarForm = document.getElementById('calendar-form');
 const calendarInput = document.getElementById('calendar');
-const historyRate = document.getElementById('history-rate');
+const historyRate = document.getElementById('history-rate__p');
 const currency = document.getElementsByName('currency');
 const todayOut = document.getElementById('today');
 const currencyRadio = document.getElementById('currency-radio');

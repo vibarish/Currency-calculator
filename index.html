@@ -14,42 +14,65 @@
     <h2>Расчет валюты</h2>
   </header>
   <div class="app">
-    <div class="currency-table">
-      <span id="date"></span>
-      <h4>Расчет по биржевому курсу </h4>
-      <p id="today"></p>
-      <table id="stock-tab">
-        <tr>
-          <th></th>
-          <th>Курс</th>
-          <th>Сумма</th>
-          <th>Сумма в рублях</th>
-        </tr>
-        <tr>
-          <td class="icon"><i class="fas fa-dollar-sign"></i></td>
-          <td id="usd-stock"></td>
-          <td>
-            <form action="" id="usdInputForm">
-              <input type="number" id="usdInput">
-            </form>
-          </td> 
-          <td class="" id="summaUSD"></td>
-        </tr>
-        <tr>
-          <td class="icon"><i class="fas fa-euro-sign"></i></td>
-          <td id="euro-stock"></td>
-          <td>
-            <form id="euro-input-form">
-              <input type="number" id="euro-input">
-            </form>
-          </td>
-          <td class="" id="summaEUR"></td>
-        </tr>
-        <tr>
-          <td colspan="3" >Итого:</td>
-          <td id="resultSum"></td>
-        </tr>
-      </table>
+    <div id="tabs">
+
+      <div class="currency-table">
+        <span id="date"></span>
+        <h4>Расчет по биржевому курсу </h4>
+        <p id="today"></p>
+        <table id="stock-tab">
+          <tr>
+            <th></th>
+            <th>Курс</th>
+            <th>Сумма</th>
+            <th>Сумма в рублях</th>
+          </tr>
+          <tr>
+            <td class="icon"><i class="fas fa-dollar-sign"></i></td>
+            <td id="usd-stock"></td>
+            <td>
+              <form action="" id="usdInputForm">
+                <input type="number" id="usdInput">
+              </form>
+            </td> 
+            <td class="" id="summaUSD"></td>
+          </tr>
+          <tr>
+            <td class="icon"><i class="fas fa-euro-sign"></i></td>
+            <td id="euro-stock"></td>
+            <td>
+              <form id="euro-input-form">
+                <input type="number" id="euro-input">
+              </form>
+            </td>
+            <td class="" id="summaEUR"></td>
+          </tr>
+          <tr>
+            <td colspan="3" >Итого:</td>
+            <td id="resultSum"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="currency-table">
+        <h4>Курс валют Центрбанка</h4>
+        <table>
+          <tr>
+            <th></th>
+            <th>Курс ЦБ</th>
+            <th>Изменение курса</th>
+          </tr>
+          <tr>
+            <td><i class="fas fa-dollar-sign"></i></td>
+            <td id="usd"></td>
+            <td class="" id="usd-dynamic"></td>
+          </tr>
+          <tr>
+            <td><i class="fas fa-euro-sign"></i></td>
+            <td id="euro"></td>
+            <td class="" id="euro-dynamic"></td>
+          </tr>
+        </table>
+      </div>
     </div>
     <!-- Справочные значения -->
     <div class="history">
@@ -68,28 +91,11 @@
           name="currency" value="EUR">
           <label for="contactChoice2">Евро</label>
       </form>
-      <p id="history-rate"></p>
+      <div id="history-rate">
+        <p id="history-rate__p"></p>
+      </div>
     </div>
-    <div class="currency-table">
-      <h4>Курс валют Центрбанка</h4>
-      <table>
-        <tr>
-          <th></th>
-          <th>Курс ЦБ</th>
-          <th>Изменение курса</th>
-        </tr>
-        <tr>
-          <td><i class="fas fa-dollar-sign"></i></td>
-          <td id="usd"></td>
-          <td class="" id="usd-dynamic"></td>
-        </tr>
-        <tr>
-          <td><i class="fas fa-euro-sign"></i></td>
-          <td id="euro"></td>
-          <td class="" id="euro-dynamic"></td>
-        </tr>
-      </table>
-    </div>
+
   </div>
   <script src="./scripts/currency.js"></script>
   <script src="./scripts/historyRate.js"></script>
