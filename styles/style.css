@@ -8,7 +8,6 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  /* max-width: 400px; */
   align-items: center;
   justify-content: center;
   font-family: 'Comfortaa', cursive, Arial, Helvetica, sans-serif;
@@ -25,8 +24,6 @@ body {
   transition: all 0.5s ease-in ;
   background-color: white;
   padding: 5px;
-  /* width: 500px; */
-  /* min-width: 600px; */
 }
 header {
   color: white
@@ -99,8 +96,6 @@ tr:hover {
   align-items: center;
   justify-content: center;
   margin: 15px 0;
-  /* padding: 10px; */
-  /* width: 300px; */
 }
 #history-rate {
   font-size: 25px;
@@ -128,6 +123,21 @@ h4, p {
 
 h2 {
   text-align: center;
+}
+
+.popup {
+  display: none;
+  border-radius: 5%;
+  position: absolute;
+  z-index: 2;
+  background-color: rgb(221, 201, 201);
+  width: 100px;
+  height: 70px;
+  padding: 2px;
+  font-size: 14px;
+}
+.visible {
+  display: flex;
 }
 
 @media (max-width: 800px) {

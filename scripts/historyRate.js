@@ -1,3 +1,5 @@
+import { popupHandler } from './popup.js';
+
 const calendarForm = document.getElementById('calendar-form');
 const calendarInput = document.getElementById('calendar');
 const historyRate = document.getElementById('history-rate__p');
@@ -28,7 +30,6 @@ calendarForm.addEventListener('change', (event) => {
     }
   });
 
-  // console.log('Дата для курса', calendarInput.value);
   currencyDate = calendarInput.value;
   let selectedDate = currencyDate.split('-');
   let selectedYear = parseInt(selectedDate[0]);
@@ -57,5 +58,5 @@ calendarForm.addEventListener('change', (event) => {
         stockFetch();
         return;
       }
-  alert('Выбранная дата из будущего!');
+  popupHandler(currencyRadio,'Выбранная дата из будущего!');
 })

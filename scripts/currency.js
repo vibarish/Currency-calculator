@@ -1,3 +1,4 @@
+import { popupHandler } from './popup.js';
 
 const usd = document.getElementById('usd');
 const euro = document.getElementById('euro');
@@ -62,25 +63,26 @@ fetch('https://openexchangerates.org/api/latest.json?app_id=3cd2a00ebc2b49978ecf
 }).catch(err => console.error(err));
 
 function currencyInputHandler(inputValue) {
-    if (inputValue > 0) {
+    if (inputValue.value > 0) {
         resultHandler();
         sumUSD.innerText = (usdStockRate * usdInput.value).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
         sumEuro.innerHTML = (euroStockRate * euroInput.value).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     }
     else {
-        alert('Введите корректные данные!');
-        inputValue = 0;
+        popupHandler(inputValue, 'Введите корректные данные!');
+        usdInput.value = '';
+        euroInput.value = '';
     }
 }
 
 usdIn.addEventListener('submit', (event) => {
     event.preventDefault();
-    currencyInputHandler(usdInput.value);
+    currencyInputHandler(usdInput);
 });
 
 euroIn.addEventListener('submit', (event) => {
     event.preventDefault();
-    currencyInputHandler(euroInput.value);
+    currencyInputHandler(euroInput);
 });
 
 const resultHandler = () => {
