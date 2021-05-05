@@ -135,7 +135,7 @@ h2 {
     flex-direction: column;
   }
   #stock-tab {
-    min-width: 100px;
+    min-width: 200px;
   }
   #currency-radio {
     flex-direction: row;
