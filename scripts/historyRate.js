@@ -58,5 +58,5 @@ calendarForm.addEventListener('change', (event) => {
         stockFetch();
         return;
       }
-  popupHandler(currencyRadio,'Выбранная дата из будущего!');
+  popupHandler(calendarInput,'Выбранная дата из будущего!');
 })
