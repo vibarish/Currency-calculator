@@ -19,6 +19,9 @@ const resultSum = document.getElementById('resultSum');
 const usdDynamic = document.getElementById('usd-dynamic');
 const euroDynamic = document.getElementById('euro-dynamic');
 
+const oneRubUSD = document.getElementById('one-rub-usd');
+const oneRubEur = document.getElementById('one-rub-eur');
+
 let usdStockRate = 0;
 let euroStockRate = 0;
 
@@ -29,6 +32,8 @@ fetch('https://www.cbr-xml-daily.ru/daily_json.js')
     let euroRate = 0;
     let euroDynamicValue = 0;
     let usdDynamicValue = 0;
+    let oneRubUSDVal = 0;
+    let oneRubEurVal = 0;
 
     euroRate = out.Valute.EUR.Value;
     usdRate = out.Valute.USD.Value;
@@ -38,9 +43,13 @@ fetch('https://www.cbr-xml-daily.ru/daily_json.js')
 
     euroDynamicValue = euroRate - out.Valute.EUR.Previous;
     usdDynamicValue = usdRate - out.Valute.USD.Previous; 
+    oneRubUSDVal = 1 / usdRate;
+    oneRubEurVal = 1 / euroRate;
 
     euroDynamic.innerHTML = `${euroDynamicValue.toFixed(2)} рублей`;
     usdDynamic.innerHTML = `${usdDynamicValue.toFixed(2)} рублей`;
+    oneRubUSD.innerHTML = `${oneRubUSDVal.toFixed(4)}`
+    oneRubEur.innerHTML = `${oneRubEurVal.toFixed(4)}`;    
 
     if (euroDynamicValue > 0) {
         euroDynamic.classList.add('currency-dynamic-more');
