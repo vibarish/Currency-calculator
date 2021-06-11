@@ -140,6 +140,11 @@ h2 {
   display: flex;
 }
 
+canvas {
+  max-height: 400px;
+  max-width: 500px;
+}
+
 @media (max-width: 800px) {
   .history {
     flex-direction: column;
