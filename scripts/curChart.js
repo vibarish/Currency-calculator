@@ -27,10 +27,6 @@ console.log('Доллар', usdArr);
 console.log('Евро', euroArr);
 console.log('даты', datesArr);
 
-const getUSD = usdArr.slice();
-const result = getUSD.find((item) =>  item.value == 74.2024)
-
-
 const ctx = document.getElementById("myChart").getContext("2d");
 
 const myChart = new Chart(ctx, {
