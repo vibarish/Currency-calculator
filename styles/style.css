@@ -140,10 +140,12 @@ h2 {
   display: flex;
 }
 
-canvas {
-  max-height: 400px;
-  max-width: 500px;
+.chart-container {
+  position: relative;
+  height: 40vh;
+  width: 80vw;
 }
+
 
 @media (max-width: 800px) {
   .history {
