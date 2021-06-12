@@ -17,19 +17,20 @@ for (let i = 0; i <= 4; i++) {
     .then((out) => {
       usdArr.push(out.rates.RUB);
       euroArr.push(out.rates.RUB / out.rates.EUR);
-      // console.log(usdArr);
 
     })
-    .catch((err) => console.error(err))
-    .then(() => myChart);
+    .then(() => {
+      
+    })
+    .catch((err) => console.error(err));
 }
 console.log('Доллар', usdArr);
 console.log('Евро', euroArr);
 console.log('даты', datesArr);
 
-const ctx = document.getElementById("myChart").getContext("2d");
-
-window.onload = () => {
+window.onload = function() {
+  setTimeout(() => {
+    const ctx = document.getElementById("myChart").getContext("2d");
   const myChart = new Chart(ctx, {
     type: "line",
     data: {
@@ -90,5 +91,7 @@ window.onload = () => {
       
     },
   });
-}
+  }, 300);
+  
 
+}

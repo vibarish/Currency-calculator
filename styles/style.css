@@ -146,7 +146,6 @@ h2 {
   width: 80vw;
 }
 
-
 @media (max-width: 800px) {
   .history {
     flex-direction: column;
