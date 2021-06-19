@@ -4,16 +4,28 @@ let datesArr = [];
 
 const today = new Date();
 let todayMonth = `${today.getMonth() + 1}`;
+// let todayMonth = 10;
 let todayDate = `${today.getDate()}`;
+// let todayDate = '5';
+let addZeroDay ='';
+console.log(todayDate.length);
+let todayYear = today.getFullYear();
 
-if (todayDate.length === 1) todayDate = `0${today.getDate()}`;
+if (todayDate.length === 1) addZeroDay = 0;
+let lastYear = 0;
 
 for (let i = 0; i < 5; i++) {
   let currentMonth = todayMonth - i;
-  // if (currentMonth.length === 1) currentMonth = `0${currentMonth}`;
-  console.log(currentMonth.length);
+  if (currentMonth < 1) {
+    lastYear = 1;
+    currentMonth = 12;
+    todayMonth = 12 + i;
+  } 
+  
+  let addZero = '';
+  if (currentMonth < 10) addZero = 0;
 
-  let currentDate = `${today.getFullYear()}-0${currentMonth}-${todayDate}`;
+  let currentDate = `${todayYear - lastYear}-${addZero}${currentMonth}-${addZeroDay}${todayDate}`;
   fetch(
     `https://openexchangerates.org/api/historical/${currentDate}.json?app_id=3cd2a00ebc2b49978ecfdb19ce68cecf`
   )
@@ -49,6 +61,7 @@ for (let i = 0; i < 5; i++) {
           break;
         case 10:
           currentMonth = 'Октябрь';
+          break;
         case 11:
           currentMonth = 'Ноябрь';
           break;
@@ -56,7 +69,6 @@ for (let i = 0; i < 5; i++) {
           currentMonth = 'Декабрь';
           break;
       }
-      // console.log(i);
       datesArr[i] = currentMonth;
       usdArr[i] = out.rates.RUB;
       euroArr[i] = out.rates.RUB / out.rates.EUR;
