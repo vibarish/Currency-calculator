@@ -8,7 +8,6 @@ let todayMonth = `${today.getMonth() + 1}`;
 let todayDate = `${today.getDate()}`;
 // let todayDate = '5';
 let addZeroDay ='';
-console.log(todayDate.length);
 let todayYear = today.getFullYear();
 
 if (todayDate.length === 1) addZeroDay = 0;
