@@ -17,17 +17,13 @@ const currentMonth = today.getMonth()+1;
 const currentDay = today.getDate();
 
 calendarInput.value = `${currentYear}-0${currentMonth}-${currentDay}`;
-// historyRate.innerHTML = `100500`;
 
 todayOut.innerHTML = `Сегодня ${date}`;
 
 const defaultFetch = () => fetch(`https://openexchangerates.org/api/historical/${currentYear}-0${currentMonth}-${currentDay}.json?app_id=3cd2a00ebc2b49978ecfdb19ce68cecf`)
 .then(res => res.json())
 .then((out) => {
-    if (flag == 'USD')
-      historyRate.innerHTML = `${(out.rates.RUB).toFixed(2)} рублей`;
-    if (flag == 'EUR')  
-      historyRate.innerHTML = `${(out.rates.RUB / out.rates.EUR).toFixed(2)} рублей`;
+  historyRate.innerHTML = `${(out.rates.RUB).toFixed(2)} рублей`;
 }).catch(err => console.error(err));
 
 defaultFetch(); 

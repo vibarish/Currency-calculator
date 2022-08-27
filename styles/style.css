@@ -79,7 +79,7 @@ th {
 }
 
 tr:hover {
-  background-color: blue;
+  background-color: rgb(114, 35, 84);
   color: white;
   cursor: pointer;
   transition: all 0.3s ease-in;
