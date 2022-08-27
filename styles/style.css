@@ -13,7 +13,7 @@ body {
   font-family: 'Comfortaa', cursive, Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
-  background-color: rgb(156, 156, 141);
+  background-color: rgba(236, 231, 255, 0.995);
 }
 .app {
   display: flex;
@@ -26,7 +26,7 @@ body {
   padding: 5px;
 }
 header {
-  color: white
+  color: rgb(114, 35, 84);
 }
 .currency-table {
   display: flex;

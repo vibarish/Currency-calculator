@@ -101,6 +101,13 @@ const resultHandler = () => {
     resultSum.innerHTML = `${result.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} рублей`;
 };
 
+const openCbrWebSite = () => {
+    window.open('https://www.cbr.ru/key-indicators/', '_blank');
+}
+
+usd.addEventListener('click', openCbrWebSite);
+euro.addEventListener('click', openCbrWebSite);
+
 
 
 
