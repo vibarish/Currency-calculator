@@ -12,7 +12,6 @@
 <body>
   <header>
     <h2>Расчет валюты</h2>
-    
   </header>
   <div class="app">
     <div class="popup">
@@ -78,6 +77,10 @@
             <td id="euro-dynamic"></td>
           </tr>
         </table>
+        <h4>Изменение биржевого курса валюты</h4>
+        <div class="chart-container">
+          <canvas id="myChart"></canvas>
+        </div>
       </div>
     </div>
     <!-- Справочные значения -->
@@ -100,10 +103,7 @@
       <div id="history-rate">
         <p id="history-rate__p"></p>
       </div>
-    </div>
-    <h4>Изменение биржевого курса валюты</h4>
-    <div class="chart-container">
-      <canvas id="myChart"></canvas>
+
     </div>
   </div>
   <script type="module" src="./scripts/curChart.js"></script>

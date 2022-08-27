@@ -18,12 +18,15 @@ body {
 .app {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
   border-style: outset;
   border-radius: 2%;
   transition: all 0.5s ease-in ;
   background-color: white;
   padding: 5px;
+  width: 90%;
 }
 header {
   color: rgb(114, 35, 84);
@@ -95,7 +98,7 @@ tr:hover {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 15px 0;
+  margin: 5px 0;
 }
 #history-rate {
   font-size: 25px;
