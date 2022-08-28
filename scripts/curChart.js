@@ -121,7 +121,9 @@ window.onload = function() {
       
     },
   });
-  }, 400);
+  }, 1000);
   
 
-}
+};
+
+// currencyChart();
